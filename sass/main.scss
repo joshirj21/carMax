@@ -1,3 +1,10 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/utilities/flex";
+@import "../node_modules/bootstrap/scss/utilities/display";
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 *,
@@ -28,10 +35,14 @@ body{
     margin:0;
     margin-bottom: 2rem;
 }
-.navbar-links-left{
-    align-items: flex-start;
-    display:flex;
+.header-main-logo{
+    height: 2.4rem;
+    width: 12.3rem;
 }
+// .navbar-links-left{
+//     align-items: flex-start;
+//     display:flex;
+// }
 .navbar-links-right{
     display: flex;
     justify-content: flex-end;
@@ -44,6 +55,15 @@ body{
     margin-left: 0.8rem;
     margin-right: 1.6rem;
 }
+.dropdown-menu{
+    border-radius: 8px;
+    color: #6d747a;
+}
+.dropdown-item:active,.dropdown-item:visited,.dropdown-item,.dropdown-item:hover{
+    text-decoration: none;
+    font-size:1.4rem !important;
+    padding: 1rem;
+}
 .fas.fa-heart{
     color: #E13B38;
 }
@@ -52,7 +72,7 @@ body{
     display: flex;
 }
 .searchBar-input{
-    width: 95%;
+    width: 92%;
     border-width: .1rem .1rem .1rem .1rem;
     border-style: solid;
     border-color: rgb(222, 223, 224) rgb(222, 223, 224) rgb(222, 223, 224);;
@@ -72,7 +92,7 @@ body{
     border-width: .1rem .1rem .1rem 0;
     border-style: solid;
     border-color: rgb(222, 223, 224) rgb(222, 223, 224) rgb(222, 223, 224);;
-    width: 5%;
+    width: 8%;
     display: inline-block;
     height: 1rem;
     border-radius: 0 1rem 1rem 0;
@@ -91,3 +111,36 @@ body{
 .fas.fa-search{
     font-size: 1.5rem;
 }
+// 992
+@media (max-width:1220){
+    html{
+    font-size: 60%;
+}
+}
+@media (max-width:840px) {
+    html{
+        font-size: 58%;
+    }
+  }
+  @media (max-width:768px) {
+    html{
+        font-size: 56%;
+    }
+  }
+  @media (max-width:576px) {
+    html{
+        font-size: 51%;
+    }
+// @media (max-width:576px) {
+//         html{
+//             font-size: 58%;
+//     }
+  }
+
+// @media (max-width: 992px) { 
+    
+//     // #navbar-links-left{
+//     //     display: hidden;
+//     // }
+//  }
+ 
