@@ -23,6 +23,8 @@ body{
     font-weight: 400;
     box-sizing: border-box;
 }
+
+// toggler at lg break point
 .toggler{
     height: 100vh;
     width: 0%;
@@ -30,16 +32,18 @@ body{
     z-index: 999;
     top: 0;
     left: 0;
-    background: pink;
+    background:red;
 }
+
+// Navbar code
 .navbar{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 99;
     width: 100%;
-    padding: 3rem 7rem;
-    height: 12rem;
+    padding: 30px 70px;
+    height: 15rem;
 }
 .navbar-items{
     width: 100%;
@@ -124,11 +128,66 @@ body{
 .fas.fa-search{
     font-size: 1.5rem;
 }
+
+
+// Hero section
+
+.hero{
+    // Need to implement opacity and overlaoy color
+    background-image: url("https://www.carmax.com/home/images/home/hero/desktop/default.jpg");
+    // filter: opacity(92%);
+    // filter: contrast(80%);
+    background-position: top;
+    background-size:cover;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    // padding-top: 50%;
+}
+.hero-content{
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+.hero-content-heading{
+    display:flex;
+    justify-content: center;
+    font-size: 3.6rem;
+    font-weight: 800;
+    color: white;
+}
+.hero-content-button{
+    display:flex;
+    justify-content: center;
+}
+.hero-content-button button{
+    padding: 1.5rem 3.8rem;
+    background: #ffd900;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 2px;
+    color: #053361;
+    border: none;
+    outline: none;
+}
 // 992
 @media (max-width:1220){
     html{
     font-size: 60%;
 }
+}
+@media (max-width:896px){
+    .hero-content-heading{
+        font-size: 3rem;
+    }
+    .hero-content{
+        top: 50%;
+    }
+    .navbar{
+        padding: 20px 0px;
+    }
 }
 @media (max-width:840px) {
     html{
@@ -139,10 +198,16 @@ body{
     html{
         font-size: 56%;
     }
-  }
+}
   @media (max-width:576px) {
     html{
-        font-size: 51%;
+        font-size: 57%;
+    }
+    .hero-content-heading{
+        font-size: 2rem;
+    }
+    .hero-content{
+        top: 60%;
     }
 // @media (max-width:576px) {
 //         html{
